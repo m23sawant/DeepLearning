@@ -5,6 +5,8 @@ The Food-101 dataset is one of the most popular datasets in the world for food i
 Back in 2014, when the paper was published, researchers could correctly classify the classes with an accuracy of 50.76% with Random Forests. The current State of the art results were acheived by [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/pdf/1905.11946v3.pdf) and [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism.
 ](https://arxiv.org/abs/1811.06965) obtaining a top-1 accuracy of 93%.
 ### My Solution
+I was able to achieve a top-1 accuracy of ~89.22% and a top-5 accuracy of ~98.17% which are both quite close to the SoTA results. 
+
 I have not used specialized architectures or huge models, but something very simple. An off-the-shelf Resnet50 paired with Fast.ai. And as the founder of Fast.ai Jeremy Howard says, *Fast.ai will spread machine learning far beyond the select few practitioners who dominate the field.* Without using any custom architecture and by using free GPU resource like Google Colab, I was able to acheive near-SoTA results. This was possible mainly because of the use of image augmentations, progressive resizing and test time augmentations. 
 
 Steps Involved:
