@@ -1,3 +1,6 @@
+## https://www.googleapis.com/drive/v3/files/1--bCN_4Y95_GXwH0ezPdAXHw9Ba3d2JU?alt=media&key=AIzaSyDUh05b8uHWU1WHZK_rYwqgTsz-oGaJf_Q
+
+
 import aiohttp
 import asyncio
 import uvicorn
@@ -9,10 +12,21 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://www.dropbox.com/s/6bgq8t6yextloqp/export.pkl?raw=1'
-export_file_name = 'export.pkl'
 
-classes = ['black', 'grizzly', 'teddys']
+export_file_url = 'https://www.googleapis.com/drive/v3/files/1--bCN_4Y95_GXwH0ezPdAXHw9Ba3d2JU?alt=media&key=AIzaSyDUh05b8uHWU1WHZK_rYwqgTsz-oGaJf_Q' #This will be the download url for your export.pkl file that you have already saved.
+export_file_name = 'export3.pkl'
+
+classes = ["Apple pie","Baby back ribs","Baklava","Beef carpaccio","Beef tartare","Beet salad","Beignets","Bibimbap","Bread pudding","Breakfast burrito","Bruschetta",
+           "Caesar salad","Cannoli","Caprese salad","Carrot cake","Ceviche","Cheesecake","Cheese plate","Chicken curry","Chicken quesadilla","Chicken wings",
+           "Chocolate cake","Chocolate mousse","Churros","Clam chowder","Club sandwich","Crab cakes","Creme brulee","Croque madame","Cup cakes",
+           "Deviled eggs","Donuts","Dumplings","Edamame","Eggs benedict","Escargots","Falafel","Filet mignon","Fish and chips","Foie gras","French fries",
+           "French onion soup","French toast","Fried calamari","Fried rice","Frozen yogurt","Garlic bread","Gnocchi","Greek salad","Grilled cheese sandwich",
+           "Grilled salmon","Guacamole","Gyoza","Hamburger","Hot and sour soup","Hot dog","Huevos rancheros","Hummus","Ice cream","Lasagna","Lobster bisque",
+           "Lobster roll sandwich","Macaroni and cheese","Macarons","Miso soup","Mussels","Nachos","Omelette","Onion rings","Oysters","Pad thai","Paella",
+           "Pancakes","Panna cotta","Peking duck","Pho","Pizza","Pork chop","Poutine","Prime rib","Pulled pork sandwich","Ramen","Ravioli","Red velvet cake",
+           "Risotto","Samosa","Sashimi","Scallops","Seaweed salad","Shrimp and grits","Spaghetti bolognese","Spaghetti carbonara","Spring rolls","Steak",
+           "Strawberry shortcake","Sushi","Tacos","Takoyaki","Tiramisu","Tuna tartare","Waffles"] #Replace these classes with the labels that your model identifies.
+
 path = Path(__file__).parent
 
 app = Starlette()
@@ -62,6 +76,7 @@ async def analyze(request):
     img = open_image(BytesIO(img_bytes))
     prediction = learn.predict(img)[0]
     return JSONResponse({'result': str(prediction)})
+
 
 
 if __name__ == '__main__':
