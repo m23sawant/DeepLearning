@@ -1,0 +1,9 @@
+
+train: '/content/drive/My Drive/images/coco-text-train'
+val: '/content/drive/My Drive/images/coco-text-valid'
+
+# number of classes
+nc: 1
+
+# class names
+names: ['machine text']
