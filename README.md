@@ -14,7 +14,7 @@ A collection of my projects using Deep Learning and Neural Networks
 | ------ | ------ | ------ | ------ | ------ | ------ | 
 | [Food-101](http://data.vision.ee.ethz.ch/cvl/food-101.tar.gz) | Resnet50 | Default augmentations in Fastai2 + MixUp | 15 | 8 hours 15 minutes | Accuracy = 89.33% Top 5 accuracy = 98.17% |
 
-2. ### [Food 101](https://github.com/m23sawant/DeepLearning/tree/master/COCO-Text-ObjectDetection)
+3. ### [COCO-Text Object Detection](https://github.com/m23sawant/DeepLearning/tree/master/COCO-Text-ObjectDetection)
 
 | Dataset | Architecture | Transformations | Epochs | Time to train | Metrics |
 | ------ | ------ | ------ | ------ | ------ | ------ | 
