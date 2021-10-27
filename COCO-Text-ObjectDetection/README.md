@@ -2,6 +2,8 @@
 
 ## Task:
 To train an object detection neural network on COCO-Text dataset. Please read the ReadMe.pdf in Findings folder for detailed information. 
+## Demo:
+[![Video Demo of the model](https://img.youtube.com/vi/dY-MGVXR3EA/0.jpg)](https://www.youtube.com/watch?v=dY-MGVXR3EA)
 
 ## File Structure:
 ~~~~~~~
